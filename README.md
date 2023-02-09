@@ -1,4 +1,6 @@
-CNN_Layres
+
+# CNN_Layers
+
 
 In this project I have written a code that we can use to see the feature maps of a CNN layers or the output of each layer. I have used ```PyTorch``` because the accessibility to each layer is better and more convenient. 
 First of all clone the repository and run ```cnn's_layers_visualization```. 
@@ -22,6 +24,7 @@ We can either plot feature maps or outputs, using ```plot_feature_map``` which i
 here are the outputs of first 7 layers of my model.
 
 after passing from first convolutional layer (```conv1```) we have following results: 
+
 ![outputs of first convolutional layer](./Assets/op_conv1.png)
 
 By applying a ```relu``` activation function, we have following results:
@@ -44,11 +47,13 @@ outputs of ```relu3``` layer:
 outputs of ```Maxpooling``` layer:
 ![outputs of MaxPooling layer](./Assets/op_maxpooling.png)
 
+
 Now lets see how are our feature maps operating, it seems that some feature maps are extracting features that are showing the vertical pixels brightness changes, such as ```filter 2```  in the outputs of the layer ```conv3```  or ```filter 6``` in the outputs of ```conv2```, although it seems that the recent feature map is some how a vertical edge detector too. Also, some other filters are calculating the derivative of the input. such as ```filter 7``` in the outputs of the layer ```conv2```. Furthermore, it seems that the ```filter 6``` in the layer ```conv3``` is extracting the feature of diagonal changes in pixels brightness. In general, each filter extract a features that makes the classification more accurate. features such as, vertical and horizontal changes of brightness, edge detection, derivative, corner detection, and so on. 
 
 Now lets see the feature maps of each convolutional layer, First change the paramter ```plot_feature_map``` to ```True``` and specify the layer number, the layer number must be the number of a convolutional layer, because obviously ```relu``` layer has no feature map:  
 
 Feature maps of the first convolutional Layers:
+
 ![outputs of first convolutional layer](./Assets/fm_conv1.png)
 
 Feature maps of the second convolutional Layers:
